@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Brett Favre NFC Search</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      body {
+        font-family: sans-serif;
+        text-align: center;
+        padding: 40px;
+        background-color: #1a1a1a;
+        color: white;
+      }
+      button {
+        width: 80%;
+        max-width: 300px;
+        padding: 15px 30px;
+        font-size: 18px;
+        margin: 20px auto;
+        border: none;
+        background-color: #7BAFD4;
+        color: #1a1a1a;
+        border-radius: 8px;
+        cursor: pointer;
+        display: block;
+      }
+      p {
+        font-size: 16px;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Brett Favre Comp Search</h2>
+    <p>Tap to copy the card name below, then paste it into the search bar on 130point.</p>
+    <button onclick="copyText()">Copy Search Term</button>
+    <p id="copied" style="color: #7BAFD4;"></p>
+    <button onclick="window.open('https://130point.com/sales/', '_blank')">Go to 130point</button>
+
+    <script>
+      function copyText() {
+        const text = "Brett Favre Gridiron Greats GG33";
+        navigator.clipboard.writeText(text).then(() => {
+          document.getElementById("copied").innerText = "Copied!";
+        });
+      }
+    </script>
+  </body>
+</html>
